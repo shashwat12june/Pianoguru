@@ -17,7 +17,9 @@ public class MusicPlayer extends MediaPlayer {
    static MediaPlayer mediaPlayer;
     static int sounds[]={R.raw.a1,R.raw.a1s,R.raw.b1,R.raw.c1,R.raw.c1s,R.raw.c2,R.raw.d1,R.raw.d1s,R.raw.e1,R.raw.f1,R.raw.f1s,R.raw.g1,R.raw.g1s};
 static int i=0;
+    static String state="False";
   static  ArrayList<String> arrays=new ArrayList<String>(Arrays.asList("A1","A1s","B1","C1","C1s","C2","D1","D1s","E1","F1","F1s","G1","G1s"));
+
     public static MediaPlayer mPlayer()
     {
         if (mediaPlayer==null)
@@ -28,9 +30,11 @@ static int i=0;
 
     public static void playMusic(String arg, final Context context, final ArrayList arrayList)
     {
-
+        if(state.equals("true"))
+            System.exit(0);
+        HomeActivity.setText(arg);
         mediaPlayer= mPlayer();
-        if(arg==".")
+        if(arg.equals("."))
         {  Runnable r = new Runnable() {
             @Override
             public void run(){
@@ -54,6 +58,7 @@ static int i=0;
                     i++;
                     if (i < arrayList.size())
                         playMusic((String) arrayList.get(i), context, arrayList);
+                    mediaPlayer.reset();
                 }
             });
 

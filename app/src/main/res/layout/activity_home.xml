@@ -22,6 +22,7 @@ android:background="#60d3d3d3"
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:weightSum="1"
+    android:id="@+id/linear"
     android:layout_centerHorizontal="true"
     android:layout_centerVertical="true"
     android:orientation="horizontal">
@@ -38,14 +39,7 @@ android:background="#60d3d3d3"
 <LinearLayout
     android:layout_width="80dp"
     android:layout_weight=".02"
-    android:layout_height="50dp">
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sdfsd"
-        />
-</LinearLayout>
+    android:layout_height="50dp"></LinearLayout>
     <Button
         android:id="@+id/stop"
         android:layout_weight=".04"
@@ -54,6 +48,26 @@ android:background="#60d3d3d3"
         android:layout_height="50dp"
         android:background="@drawable/background"
         />
-</LinearLayout>
 
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:id="@+id/linear2"
+        android:layout_below="@+id/linear"></LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="5dip"
+        android:textSize="25dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit ="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:hint="Lyrics !!"
+        android:id="@+id/currentPos"
+        style="@style/Base.DialogWindowTitleBackground.AppCompat"
+        android:background="#ffffff"
+        android:layout_below="@+id/linear2"/>
 </RelativeLayout>
