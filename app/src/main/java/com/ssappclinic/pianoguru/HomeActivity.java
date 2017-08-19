@@ -25,8 +25,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         playPause = (Button) findViewById(R.id.play_pause);
         stop = (Button) findViewById(R.id.stop);
         playPause.setOnClickListener(this);
-        stop.setOnClickListener(this);
-
+       stop.setOnClickListener(this);
 
     }
 
