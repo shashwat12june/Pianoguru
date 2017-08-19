@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     protected EditText note;
@@ -19,7 +20,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     protected Button playPause,stop;
     int i, t = 0;
     MediaPlayer mediaPlayer;
-
+    static HashMap hm=new HashMap<String,Integer>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,26 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         stop = (Button) findViewById(R.id.stop);
         playPause.setOnClickListener(this);
        stop.setOnClickListener(this);
+
+
+
+            hm.put("A1",R.raw.a1);
+            hm.put("A1s",R.raw.a1s);
+            hm.put("B1",R.raw.b1);
+            hm.put("C1",R.raw.c1);
+            hm.put("C1s",R.raw.c1s);
+            hm.put("C2",R.raw.c2);
+            hm.put("D1",R.raw.d1);
+            hm.put("D1s",R.raw.d1s);
+            hm.put("E1",R.raw.e1);
+            hm.put("F1",R.raw.f1);
+            hm.put("F1s",R.raw.f1s);
+            hm.put("G1",R.raw.g1);
+            hm.put("G1s",R.raw.g1s);
+
+
+
+
 
     }
 
